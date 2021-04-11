@@ -203,7 +203,7 @@
               },
           });
         //await restaurant data from Yelp API
-        var data = await resp.json();
+        var data = await resp.clone().json();
 
         console.log(data);
         console.log(data.results);
