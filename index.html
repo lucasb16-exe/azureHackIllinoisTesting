@@ -145,7 +145,7 @@
                 <input type="text" id="zip1" name="cuisine" placeholder="Zipcode" required>
             </div>
             <div class="text-center" style="padding-top: 30px;">
-              <input type="text" id="food1" name="cuisine" placeholder="Cusine of Choice" required>
+              <input type="text" id="food1" name="cuisine" placeholder="Cuisine of Choice" required>
             </div>
             </div>
           </div>
@@ -221,7 +221,14 @@
 
       function addRestaurants(data) {
 
-        
+        var parent = document.getElementById("Restaurants")
+
+        function removeAllChildNodes(parent) {
+            while (parent.firstChild) {
+                parent.removeChild(parent.firstChild);
+            }
+        }
+
         var i;
         for(i = 0; i <= 6; i++)
         {
@@ -350,7 +357,7 @@
           </div>
         </div>-->
 
-        <div id = "Restaurants" style="margin-bottom:300px;" class="row portfolio-container" data-aos-delay="200">
+        <div id = "Restaurants" style="overflow-wrap: anywhere; margin-bottom:300px;" class="row portfolio-container" data-aos-delay="200">
           <p>&nbsp;&nbsp;&nbsp;</p>
         </div>
       </div>

@@ -701,6 +701,18 @@ body {
     background: #eb5d1e;
     color: #fff;
   }
+
+  .portfolio .portfolio-wrap .portfolio-links h4{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-links p {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
   
   .portfolio .portfolio-wrap .portfolio-info {
     opacity: 0;
