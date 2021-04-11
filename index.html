@@ -204,12 +204,12 @@
           });
 
         console.log(resp);
+        console.log(resp.text());
+
 
         //await restaurant data from Yelp API
-        var data = await resp.json();
+        //var data = await resp.json();
 
-        console.log(data);
-        console.log(data.results);
 
         var newData = JSON.stringify(data.results);
 
