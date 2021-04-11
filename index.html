@@ -53,9 +53,8 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#services">Add Friends</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Restaurant Selection</a></li>
           <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -116,7 +115,7 @@
         </div>
 
       </div>
-    </section>End About Section
+    </section>
 
     
 
@@ -164,13 +163,12 @@
 
 <!-- submit button -->
 
-    <div class="text-center" style="padding-top: 40px;"><button onclick="getUserInfo()" type="submit" class="btn btn-secondary btn-lg">SUBMIT</button></div>
 
 <section>
-    
+  <div class="text-center" style="padding-top: 40px;"><button onclick="getUserInfo()" type="submit" class="btn btn-secondary btn-lg">SUBMIT</button></div>
 </section>
 
-<section>
+<!-- <section>
     <select class="select" multiple data-mdb-filter="true">
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -184,7 +182,7 @@
         <option value="10">Ten</option>
       </select>
 
-</section>
+</section> -->
 
     <script>
 
@@ -229,10 +227,10 @@
           var addP = document.createElement("div");
         //length
 
-      addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+      addP.innerHTML = `<div id = i class="col-lg-4 col-md-6 portfolio-item filter-app">
         <div class="portfolio-wrap">
       <img src=`+data["businesses"][i]["image_url"]+` class="img-fluid" alt="">
-        <div class="portfolio-info">
+        <div class="portfolio-links">
         <h4>`+data["businesses"][i]["name"]+`</h4>
         <p>`+data["businesses"][i]["location"]["display_address"][0] + ` ` + data["businesses"][i]["location"]["display_address"][1] +`</p>
         <p>`+data["businesses"][i]["rating"]+`</p>
@@ -328,8 +326,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Pick a Food Category</p>
+          <h2>final Choice</h2>
+          <p>Pick a Restuarant</p>
         </div>
 
         <div class="row" data-aos-delay="100">
@@ -343,43 +341,31 @@
           </div>
         </div>
 
-        <div id = "Restaurants" class="row portfolio-container" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-galleryery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-galleryery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
+        <div id = "Restaurants" class="row portfolio-container" data-aos-delay="200">          
         </div>
       </div>
     </section><!-- End Portfolio Section -->
-
+    <script>
+    function dollarToRange(stringDollar){
+      let val = stringDollar.length();
+      if(val == 1){
+          return "under $10";
+      }
+      else if(val > 10 && val <= 30){
+          return "$$ = 11-30";
+      }
+      else if(val > 30 && val <= 60){
+          return "$$$ = 31-60";
+      }
+      else{
+          return "$$$$ = over $61";
+      }
+   }
+  </script>
     <!-- ======= Map Section =============-->
-    <section>
+    <!-- <section>
       <html>
-        <head>
+        <head> -->
           <!-- <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
           <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
       
@@ -422,13 +408,13 @@
               }
             }
           </script> -->
-        </head>
+        <!-- </head>
       
         <body style="border: 0; margin: 0;">
           <div id="map" style="width: 100%; height: 530px;"></div>
         </body>
       </html>
-  </section>
+  </section> -->
 
   </main><!-- End #main -->
 
