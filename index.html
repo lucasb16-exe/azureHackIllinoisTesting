@@ -96,20 +96,20 @@
             <img src="assets/img/about-img.svg" class="img-fluid" alt="" data-aos="zoom-in">
           </div>
           <div class="col-lg-6 pt-5 pt-lg-0">
-            <h3 data-aos="fade-up">Voluptatem dignissimos provident quasi</h3>
+            <h3 data-aos="fade-up">Reconnect With Friends Over Food</h3>
             <p data-aos="fade-up" data-aos-delay="100">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              Finding a good place to meet with a group of friends can be hard. But we have made it easy! No more long drives, we'll help you meet your friends halfway.
             </p>
             <div class="row">
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <i class="bx bx-receipt"></i>
-                <h4>Corporis voluptates sit</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <h4>Add Friends & Pick a Cuisine</h4>
+                <p>Enter the addresses of everyone in your group and pick what kind of food you want to eat</p>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <i class="bx bx-cube-alt"></i>
-                <h4>Ullamco laboris nisi</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <h4>Pick a Restaurant</h4>
+                <p>Choose from any of the restaurants we have recommended. No worries, all choices will be close to you and your friends.</p>
               </div>
             </div>
           </div>
@@ -125,8 +125,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Check out the great services we offer</p>
+          <p>Add Friends To Your Group</p>
+          <h2>use the plus button to add more friends</h2>
         </div>
 
         <div id = "People" class="row">
@@ -234,13 +234,13 @@
       <img src=`+data["businesses"][i]["image_url"]+` class="img-fluid" alt="">
         <div class="portfolio-info">
         <h4>`+data["businesses"][i]["name"]+`</h4>
-        <p>`+data["businesses"][i]["address"]+`</p>
+        <p>`+data["businesses"][i]["location"]["display_address"][0] + ` ` + data["businesses"][i]["location"]["display_address"][1] +`</p>
         <p>`+data["businesses"][i]["rating"]+`</p>
         <p>`+data["businesses"][i]["price"]+`</p>
       </div>
     </div>
       </div>`
-          document.getElementById("Restaurants").appendChild(addP);
+          document.getElementById("Restaurants").appendChild(addP.children[0]);
         }
 
       }     
