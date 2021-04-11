@@ -221,16 +221,18 @@
 
       function addRestaurants(data) {
 
-        var parent = document.getElementById("Restaurants")
-
-        function removeAllChildNodes(parent) {
-            while (parent.firstChild) {
-                parent.removeChild(parent.firstChild);
-            }
-        }
+        var parent1 = document.getElementById("Restaurants1")
+        var parent2 = document.getElementById("Restaurants2")
+        
+      while (parent1.firstChild) {
+            parent1.removeChild(parent1.firstChild);
+      }
+      while (parent2.firstChild) {
+            parent2.removeChild(parent2.firstChild);
+      }
 
         var i;
-        for(i = 0; i <= 6; i++)
+        for(i = 0; i <= 2; i++)
         {
           //                businesses
           console.log(data["businesses"][i]);
@@ -248,7 +250,28 @@
       </div>
     </div>
       </div>`
-          document.getElementById("Restaurants").appendChild(addP.children[0]);
+          document.getElementById("Restaurants1").appendChild(addP.children[0]);
+        }
+
+        for(i = 3; i <= 5; i++)
+        {
+          //                businesses
+          console.log(data["businesses"][i]);
+          var addP = document.createElement("div");
+        //length
+
+      addP.innerHTML = `<div id = i class="col-lg-4 col-md-6 portfolio-item filter-app" onclink = `+ data["businesses"][i]["url"]+`>
+        <div class="portfolio-wrap">
+      <img src=`+data["businesses"][i]["image_url"]+` class="img-fluid" alt="">
+        <div class="portfolio-links">
+        <h4>`+data["businesses"][i]["name"]+`</h4>
+        <p>`+data["businesses"][i]["location"]["display_address"][0] + ` ` + data["businesses"][i]["location"]["display_address"][1] +`</p>
+        <p>`+data["businesses"][i]["rating"]+`</p>
+        <p>`+dollarToRange(data["businesses"][i]["price"])+`</p>
+      </div>
+    </div>
+      </div>`
+          document.getElementById("Restaurants2").appendChild(addP.children[0]);
         }
 
       }     
@@ -357,7 +380,10 @@
           </div>
         </div>-->
 
-        <div id = "Restaurants" style="overflow-wrap: anywhere; margin-bottom:300px;" class="row portfolio-container" data-aos-delay="200">
+        <div id = "Restaurants1" style="overflow-wrap: anywhere; margin-bottom:300px;" class="row portfolio-container" data-aos-delay="200">
+          <p>&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div id = "Restaurants2" style="overflow-wrap: anywhere; margin-bottom:300px;" class="row portfolio-container" data-aos-delay="200">
           <p>&nbsp;&nbsp;&nbsp;</p>
         </div>
       </div>
