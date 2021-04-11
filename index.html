@@ -225,12 +225,12 @@
         for(i = 0; i <= 6; i++)
         {
           //                businesses
-          console.log(data["businesses"][0]);
+          console.log(data["businesses"][i]);
           var addP = document.createElement("div");
-//length
+        //length
 
-addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-    <div class="portfolio-wrap">
+      addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
       <img src=`+data["businesses"][i]["image_url"]+` class="img-fluid" alt="">
         <div class="portfolio-info">
         <h4>`+data["businesses"][i]["name"]+`</h4>
@@ -239,10 +239,10 @@ addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
         <p>`+data["businesses"][i]["price"]+`</p>
       </div>
     </div>
-  </div>`
-// document.getElementById("People").appendChild(addP.children[0]);
-document.getElementById("Restaurants").appendChild(addP)
-}
+      </div>`
+          document.getElementById("Restaurants").appendChild(addP);
+        }
+
       }     
 
       function getUserInfo() {
@@ -344,16 +344,6 @@ document.getElementById("Restaurants").appendChild(addP)
         </div>
 
         <div id = "Restaurants" class="row portfolio-container" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Resturant Add</h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
