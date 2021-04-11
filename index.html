@@ -144,6 +144,9 @@
               <div class="text-center" style="padding-top: 30px;">
                 <input type="text" id="zip1" name="cuisine" placeholder="Zipcode" required>
             </div>
+            <div class="text-center" style="padding-top: 30px;">
+              <input type="text" id="food1" name="cuisine" placeholder="Cusine of Choice" required>
+            </div>
             </div>
           </div>
           <div id = "plus" class="col-md-6 col-lg-4 d-flex align-items-stretch" onclick="addPerson()">
@@ -190,12 +193,13 @@
       /* 
       * Send user's form data to our HTTP trigger
       */
-      async function handle(addresses){
+      async function handle(addresses, cuisines){
 
         var functionUrl = "https://hackillinoishttptrig.azurewebsites.net/api/HttpTrigger1?";
         const resp = await fetch (functionUrl, {
               method: 'POST',
               body: JSON.stringify(addresses),
+              body2: JSON.stringify(cuisines),
               headers: {
                 'Content-Type': 'application/json'
               },
@@ -227,14 +231,14 @@
           var addP = document.createElement("div");
         //length
 
-      addP.innerHTML = `<div id = i class="col-lg-4 col-md-6 portfolio-item filter-app">
+      addP.innerHTML = `<div id = i class="col-lg-4 col-md-6 portfolio-item filter-app" onclink = `+ data["businesses"][i][url]+`>
         <div class="portfolio-wrap">
       <img src=`+data["businesses"][i]["image_url"]+` class="img-fluid" alt="">
         <div class="portfolio-links">
         <h4>`+data["businesses"][i]["name"]+`</h4>
         <p>`+data["businesses"][i]["location"]["display_address"][0] + ` ` + data["businesses"][i]["location"]["display_address"][1] +`</p>
         <p>`+data["businesses"][i]["rating"]+`</p>
-        <p>`+data["businesses"][i]["price"]+`</p>
+        <p>`+dollarToRange(data["businesses"][i]["price"])+`</p>
       </div>
     </div>
       </div>`
@@ -245,6 +249,7 @@
 
       function getUserInfo() {
         addresses = []
+        cuisines = []
 
         var i;
         var length = document.getElementById("People").children.length;
@@ -253,13 +258,15 @@
         {
           var address = document.getElementById("address" + i).value;
           var city = document.getElementById("city" + i).value;
+          var cuisine = document.getElementById("food" + i).value;
           addresses.push(address + " " + city);
+          cuisines.push(cuisine);
           console.log(address);
         }
 
 
         console.log(addresses.length);
-        handle(addresses);
+        handle(addresses, cuisines);
         // addRestaurants(response)
         return addresses;
       }
@@ -287,6 +294,9 @@
               </div>
               <div class="text-center" style="padding-top: 30px;">
                 <input type="text" id="zip`+ length + `" name="cuisine" placeholder="Zipcode" required>
+            </div>
+            <div class="text-center" style="padding-top: 30px;">
+              <input type="text" id="food`+ length + `"name="cuisine" placeholder="Cusine of Choice" required>
             </div>
             </div>
           </div>`
@@ -351,14 +361,14 @@
       if(val == 1){
           return "under $10";
       }
-      else if(val > 10 && val <= 30){
-          return "$$ = 11-30";
+      else if(val == 2){
+          return "$11-$30";
       }
-      else if(val > 30 && val <= 60){
-          return "$$$ = 31-60";
+      else if(val == 3){
+          return "$31-$60";
       }
       else{
-          return "$$$$ = over $61";
+          return "over $61";
       }
    }
   </script>
@@ -419,7 +429,7 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <!-- <footer id="footer">
+  <footer id="footer">
     <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
@@ -485,14 +495,14 @@
         &copy; Copyright <strong><span>Ninestars</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </footer>End Footer --> 
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
