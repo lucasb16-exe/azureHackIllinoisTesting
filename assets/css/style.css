@@ -680,7 +680,7 @@ body {
     opacity: 0;
     left: 0;
     right: 0;
-    top: calc(50% - 32px);
+    top: calc(50% - 10px);
     text-align: center;
     z-index: 3;
     position: absolute;

@@ -271,11 +271,11 @@
           var addP = document.createElement("div");
         //length
 
-      addP.innerHTML = `<div id = i class="col-lg-4 col-md-6 portfolio-item filter-app" href = `+ data["businesses"][i]["url"]+`>
+      addP.innerHTML = `<div id = i class="col-lg-4 col-md-6 portfolio-item filter-app">
         <div class="portfolio-wrap">
       <img src=`+data["businesses"][i]["image_url"]+` class="img-fluid" alt="">
         <div class="portfolio-links">
-        <h4>`+data["businesses"][i]["name"]+`</h4>
+        <h4 href = `+ data["businesses"][i]["url"]+`>`+data["businesses"][i]["name"]+`</h4>
         <p>`+data["businesses"][i]["location"]["display_address"][0] + ` ` + data["businesses"][i]["location"]["display_address"][1] +`</p>
         <p>`+data["businesses"][i]["rating"]+" Stars"+`</p>
         <p>`+dollarToRange(data["businesses"][i]["price"])+`</p>
@@ -378,6 +378,7 @@
         <div class="section-title">
           <p>Find Our Recommendations Below</p>
           <h2>Hover over one for more details, click to go to the website!<h2>
+            <h2></h2>
           <h2> Prices shown are the average cost for one person.</h2>
         </div>
 
@@ -545,9 +546,9 @@
         &copy; Copyright <strong><span>Ninestars</span></strong>. All Rights Reserved
       </div>-->
       <div class="credits">
-        This webapp uses the HTTP Trigger Azure Function, Node.js, Yelp API, and MapQuest API.
-        This was developed for HackIllinois 2021
-        Team members:
+        This webapp uses the HTTP Trigger Azure Function, Node.js, Yelp API, and MapQuest API.<br/>
+        This was developed for HackIllinois 2021<br/>
+        Team members:<br/>
         Kai Bonsol, Lucas Beasely, Bhuvni Shah
         Anita Padman, Aleena Albert, Hari Seelam
       </div>
