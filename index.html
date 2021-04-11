@@ -224,19 +224,20 @@
         var i;
         for(i = 0; i <= 6; i++)
         {
-          console.log(data["buisnesses"]);
+          //                businesses
+          console.log(data["businesses"][0]);
           var addP = document.createElement("div");
           var length = document.getElementById("restaurants").children.length;
 //length
 
 addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
     <div class="portfolio-wrap">
-      <img src=`+data["buisnesses"][i]["image_url"]+` class="img-fluid" alt="">
+      <img src=`+data["businesses"][i]["image_url"]+` class="img-fluid" alt="">
         <div class="portfolio-info">
-        <h4>`+data["buisnesses"][i]["name"]+`</h4>
-        <p>`+data["buisnesses"][i]["address"]+`</p>
-        <p>`+data["buisnesses"][i]["rating"]+`</p>
-        <p>`+data["buisnesses"][i]["price"]+`</p>
+        <h4>`+data["businesses"][i]["name"]+`</h4>
+        <p>`+data["businesses"][i]["address"]+`</p>
+        <p>`+data["businesses"][i]["rating"]+`</p>
+        <p>`+data["businesses"][i]["price"]+`</p>
       </div>
     </div>
   </div>`
