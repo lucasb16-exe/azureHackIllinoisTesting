@@ -194,7 +194,7 @@
       */
       async function handle(addresses){
 
-        var functionUrl = "/api/HttpTrigger1";
+        var functionUrl = "https://mytrig.azurewebsites.net";
         const resp = await fetch (functionUrl, {
               method: 'POST',
               //body:JSON.stringify("hello world"),
@@ -202,6 +202,8 @@
                 'Content-Type': 'application/json'
               },
           });
+
+        console.log(resp);
 
         //await restaurant data from Yelp API
         var data = await resp.json();
@@ -212,9 +214,6 @@
         $('#resultsDiv').empty(); //need to clear results every time the user searches
 
         document.getElementById("address1").innerHTML="Cuisine: " + cuisine;
-
-
-
       }
 
       function getUserInfo() {
