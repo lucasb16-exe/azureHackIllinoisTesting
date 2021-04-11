@@ -218,31 +218,30 @@
 
       }
 
-      function addRestaurants(response) {
+      function addRestaurants(data) {
 
         
         var i;
         for(i = 0; i <= 6; i++)
         {
-          console.log(data["buisnesses"]);
+          console.log(data["buisnesses"][i]['name']);
           var addP = document.createElement("div");
           var length = document.getElementById("restaurants").children.length;
 //length
 
 addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
     <div class="portfolio-wrap">
-      <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+      <img src=`+data["buisnesses"][i]["image_url"]+` class="img-fluid" alt="">
         <div class="portfolio-info">
-        <h4>Restaurant Name</h4>
-        <p>Address</p>
-        <p>Rating</p>
-        <p>Price</p>
+        <h4>`+data["buisnesses"][i]["name"]+`</h4>
+        <p>`+data["buisnesses"][i]["address"]+`</p>
+        <p>`+data["buisnesses"][i]["rating"]+`</p>
+        <p>`+data["buisnesses"][i]["price"]+`</p>
       </div>
     </div>
   </div>`
 // document.getElementById("People").appendChild(addP.children[0]);
-var lastElement = document.getElementById("People").children[length-1];
-document.getElementById("People").insert(lastElement)
+document.getElementById("Restaurants").insert(addP)
 }
       }     
 
@@ -344,7 +343,7 @@ document.getElementById("People").insert(lastElement)
           </div>
         </div>
 
-        <div class="row portfolio-container" data-aos-delay="200">
+        <div id = "Restaurants" class="row portfolio-container" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
