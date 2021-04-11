@@ -605,7 +605,7 @@ body {
     margin-bottom: 0;
   }
   .services #demo {
-    font-size: 400px;
+    font-size: 40px;
   }
   
   /*--------------------------------------------------------------
@@ -666,9 +666,9 @@ body {
   .portfolio .portfolio-wrap img {
     /* max-width: 100%;
     max-height: 100%; */
-    object-fit: contain;
-    width: fit-content;
-    height: fit-content;
+    object-fit: cover;
+    width: auto;
+    max-height: 100%;
     transition: 0.3s;
     position: relative;
     z-index: 1;
