@@ -197,7 +197,7 @@
         var functionUrl = "https://hackillinoishttptrig.azurewebsites.net/api/HttpTrigger1?";
         const resp = await fetch (functionUrl, {
               method: 'POST',
-              //body:JSON.stringify("hello world"),
+              body: JSON.stringify(addresses),
               headers: {
                 'Content-Type': 'application/json'
               },
@@ -206,24 +206,27 @@
         var data = await resp.clone().json();
 
         console.log(data);
-        console.log(data.results);
+        // console.log(data.results);
 
-        var newData = JSON.stringify(data.results);
+        // var newData = JSON.stringify(data.results);
 
-        console.log(newData);
+        // console.log(newData);
 
-        var obj = JSON.parse(newData);
+        //var obj = JSON.parse(data);
 
-        $('#resultsDiv').empty(); //need to clear results every time the user searches
+        addRestaurants(data);
 
-        document.getElementById("address1").innerHTML="Cuisine: " + cuisine;
       }
 
-      function addRestaurants() {
+      function addRestaurants(response) {
 
         
-var addP = document.createElement("div");
-var length = document.getElementById("restaurants").children.length;
+        var i;
+        for(i = 0; i <= 6; i++)
+        {
+          console.log(data["buisnesses"]);
+          var addP = document.createElement("div");
+          var length = document.getElementById("restaurants").children.length;
 //length
 
 addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -240,7 +243,7 @@ addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
 // document.getElementById("People").appendChild(addP.children[0]);
 var lastElement = document.getElementById("People").children[length-1];
 document.getElementById("People").insert(lastElement)
-
+}
       }     
 
       function getUserInfo() {
@@ -260,6 +263,7 @@ document.getElementById("People").insert(lastElement)
 
         console.log(addresses.length);
         handle(addresses);
+        // addRestaurants(response)
         return addresses;
       }
 
