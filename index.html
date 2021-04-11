@@ -167,8 +167,10 @@
 <!-- submit button -->
 
 
-<section>
-  <div>class="text-center" href="#portfolio style="padding-top: 40px;"><button onclick="getUserInfo()" type="submit" class="btn btn-secondary btn-lg">SUBMIT</button></div>
+<section style="text-align:center;">
+  <div class="text-center" href="#portfolio" style="padding-top: 40px;"> 
+    <button onclick="getUserInfo()" type="submit" class="btn btn-secondary btn-lg">SUBMIT</button>
+  </div>
 </section>
 
 <!-- <section>
@@ -254,7 +256,7 @@
         <div class="portfolio-links">
         <h4>`+data["businesses"][i]["name"]+`</h4>
         <p>`+data["businesses"][i]["location"]["display_address"][0] + ` ` + data["businesses"][i]["location"]["display_address"][1] +`</p>
-        <p>`+data["businesses"][i]["rating"]+`</p>
+        <p>`+data["businesses"][i]["rating"]+" Stars"+`</p>
         <p>`+dollarToRange(data["businesses"][i]["price"])+`</p>
       </div>
     </div>

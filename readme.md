@@ -1,3 +1,9 @@
-# Vanilla JavaScript App
+# Food Connections
 
-This repo is used as a starter for a _very basic_ HTML web application using no front-end frameworks.
+Temporary website preview:https://polite-hill-023141110.azurestaticapps.net/index.html
+
+Static Web App that allows users to find restaurant recommendations halfway between their locations!
+
+API hosted from: https://github.com/lucasb16-exe/azureHackIllinoisAPI (no CI)
+
+
