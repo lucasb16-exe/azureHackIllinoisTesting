@@ -2,7 +2,7 @@
     "staticWebApps.appSubpath": "/",
     "staticWebApps.apiSubpath": "",
     "staticWebApps.outputSubpath": "./",
-    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.deploySubpath": "api\\HttpTrigger1",
     "azureFunctions.postDeployTask": "npm install",
     "azureFunctions.projectLanguage": "JavaScript",
     "azureFunctions.projectRuntime": "~3",
