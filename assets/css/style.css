@@ -604,6 +604,9 @@ body {
     line-height: 28px;
     margin-bottom: 0;
   }
+  .services #demo {
+    font-size: 400px;
+  }
   
   /*--------------------------------------------------------------
   # Portfolio
@@ -661,6 +664,11 @@ body {
   }
   
   .portfolio .portfolio-wrap img {
+    /* max-width: 100%;
+    max-height: 100%; */
+    object-fit: contain;
+    width: fit-content;
+    height: fit-content;
     transition: 0.3s;
     position: relative;
     z-index: 1;
