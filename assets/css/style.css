@@ -736,7 +736,7 @@ body {
   
   .portfolio .portfolio-wrap:hover .portfolio-info {
     opacity: 1;
-    /* bottom: 0; */
+    bottom: 0;
   }
   
   /*--------------------------------------------------------------

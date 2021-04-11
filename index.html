@@ -198,8 +198,7 @@
         var functionUrl = "https://hackillinoishttptrig.azurewebsites.net/api/HttpTrigger1?";
         const resp = await fetch (functionUrl, {
               method: 'POST',
-              body: JSON.stringify(addresses),
-              body2: JSON.stringify(cuisines),
+              body: JSON.stringify([addresses, cuisines]),
               headers: {
                 'Content-Type': 'application/json'
               },
@@ -231,7 +230,7 @@
           var addP = document.createElement("div");
         //length
 
-      addP.innerHTML = `<div id = i class="col-lg-4 col-md-6 portfolio-item filter-app" onclink = `+ data["businesses"][i][url]+`>
+      addP.innerHTML = `<div id = i class="col-lg-4 col-md-6 portfolio-item filter-app" onclink = `+ data["businesses"][i]["url"]+`>
         <div class="portfolio-wrap">
       <img src=`+data["businesses"][i]["image_url"]+` class="img-fluid" alt="">
         <div class="portfolio-links">
@@ -429,7 +428,7 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <!-- <footer id="footer">
     <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
@@ -447,10 +446,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Ninestars</h3>
+            <h3>Food Connections</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
+              1234 Code Street <br>
+              , NY 535022<br>
               United States <br><br>
               <strong>Phone:</strong> +1 5589 55488 55<br>
               <strong>Email:</strong> info@example.com<br>
@@ -475,8 +474,8 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
             </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
+          </div> -->
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
             <div class="social-links mt-3">
@@ -486,10 +485,10 @@
               <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div>
       </div>
-    </div>
+    </div> -->
     <div class="container py-4">
       <div class="copyright">
         &copy; Copyright <strong><span>Ninestars</span></strong>. All Rights Reserved
