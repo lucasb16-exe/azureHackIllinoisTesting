@@ -227,7 +227,6 @@
           //                businesses
           console.log(data["businesses"][0]);
           var addP = document.createElement("div");
-          var length = document.getElementById("Restaurants").children.length;
 //length
 
 addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -242,7 +241,7 @@ addP.innerHTML = `<div class="col-lg-4 col-md-6 portfolio-item filter-app">
     </div>
   </div>`
 // document.getElementById("People").appendChild(addP.children[0]);
-document.getElementById("Restaurants").insert(addP)
+document.getElementById("Restaurants").appendChild(addP)
 }
       }     
 
