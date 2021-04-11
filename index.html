@@ -207,7 +207,13 @@
 
         //await restaurant data from Yelp API
         var data = await resp.json();
+
+        console.log(data);
+        console.log(data.results);
+
         var newData = JSON.stringify(data.results);
+
+        console.log(newData);
 
         var obj = JSON.parse(newData);
 
