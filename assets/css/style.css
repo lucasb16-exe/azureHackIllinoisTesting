@@ -649,6 +649,7 @@ body {
     overflow: hidden;
     border-radius: 8px;
     z-index: 1;
+    height:300px;
   }
   
   .portfolio .portfolio-wrap::before {
@@ -668,7 +669,7 @@ body {
     max-height: 100%; */
     object-fit: fill;
     width: auto;
-    height: auto;
+    height: 300px;
     /* max-height: 100%; */
     transition: 0.3s;
     position: relative;
