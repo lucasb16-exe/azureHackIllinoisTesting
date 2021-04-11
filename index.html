@@ -339,7 +339,7 @@
           <p>Pick a Restuarant</p>
         </div>
 
-        <div class="row" data-aos-delay="100">
+        <!--<div class="row" data-aos-delay="100">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
@@ -348,15 +348,19 @@
               <li data-filter=".filter-web">Web</li>
             </ul>
           </div>
-        </div>
+        </div>-->
 
-        <div id = "Restaurants" class="row portfolio-container" data-aos-delay="200">          
+        <div id = "Restaurants" style="margin-bottom:300px;" class="row portfolio-container" data-aos-delay="200">
+          <p>&nbsp;&nbsp;&nbsp;</p>
         </div>
       </div>
     </section><!-- End Portfolio Section -->
     <script>
 
     function dollarToRange(stringDollar){
+      if(!stringDollar){
+        return "No Cost Provided!";
+      }
       let val = stringDollar.length;
       if(val == 1){
           return "under $10";
