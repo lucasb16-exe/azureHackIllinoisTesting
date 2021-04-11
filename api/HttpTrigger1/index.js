@@ -41,6 +41,7 @@ module.exports = async function (context, req) {
         body: testResult
         //name, image_url, restaurant url, center latitude, center longitude for map, 
     };
+    context.done();
 }
 
 function getNearbyRestaurants(lat, long, preferences)
