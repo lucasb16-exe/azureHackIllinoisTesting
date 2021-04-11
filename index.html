@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Ninestars Bootstrap Template - Index</title>
+  <title>Food Connections</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -168,7 +168,7 @@
 
 
 <section>
-  <li><a class="text-center" href="#portfolio" style="padding-top: 40px;"><button onclick="getUserInfo()" type="submit" class="btn btn-secondary btn-lg">SUBMIT</a></li>
+  <div>class="text-center" href="#portfolio style="padding-top: 40px;"><button onclick="getUserInfo()" type="submit" class="btn btn-secondary btn-lg">SUBMIT</button></div>
 </section>
 
 <!-- <section>
@@ -239,9 +239,18 @@
           var addP = document.createElement("div");
         //length
 
+        var image;
+
+          if(data["businesses"][i]["image_url"] == null){
+              image = "https://imgur.com/a/8m1GqBq";
+          }
+          else{
+            image = data["businesses"][i]["image_url"]
+          }
+
       addP.innerHTML = `<div id = i class="col-lg-4 col-md-6 portfolio-item filter-app" onclink = `+ data["businesses"][i]["url"]+`>
         <div class="portfolio-wrap">
-      <img src=`+data["businesses"][i]["image_url"]+` class="img-fluid" alt="">
+      <img src=`+ image +` class="img-fluid" alt="">
         <div class="portfolio-links">
         <h4>`+data["businesses"][i]["name"]+`</h4>
         <p>`+data["businesses"][i]["location"]["display_address"][0] + ` ` + data["businesses"][i]["location"]["display_address"][1] +`</p>
@@ -365,7 +374,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Here are some restaurants :)</h2>
+          <h2>Find Our Recommendations Below</h2>
           <p>Hover over one for more details, click to visit their website!</p>
           <p>Prices shown are the average cost for one person.</p>
         </div>
