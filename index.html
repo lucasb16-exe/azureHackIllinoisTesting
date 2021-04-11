@@ -277,7 +277,7 @@
         <div class="portfolio-links">
         <h4>`+data["businesses"][i]["name"]+`</h4>
         <p>`+data["businesses"][i]["location"]["display_address"][0] + ` ` + data["businesses"][i]["location"]["display_address"][1] +`</p>
-        <p>`+data["businesses"][i]["rating"]+`</p>
+        <p>`+data["businesses"][i]["rating"]+" Stars"+`</p>
         <p>`+dollarToRange(data["businesses"][i]["price"])+`</p>
       </div>
     </div>
@@ -376,9 +376,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Find Our Recommendations Below</h2>
-          <p>Hover over one for more details, click to visit their website!</p>
-          <p>Prices shown are the average cost for one person.</p>
+          <p>Find Our Recommendations Below</p>
+          <h2>Hover over one for more details, click to go to the website! Prices shown are the average cost for one person.</h2>
         </div>
 
         <!--<div class="row" data-aos-delay="100">
@@ -541,11 +540,11 @@
       </div>
     </div> -->
     <div class="container py-4">
-      <div class="copyright">
+      <!--<div class="copyright">
         &copy; Copyright <strong><span>Ninestars</span></strong>. All Rights Reserved
-      </div>
+      </div>-->
       <div class="credits">
-        All the links in the footer should remain intact.
+        This webapp uses the HTTP Trigger Azure Function, Yelp API, MapQuest API
         You can delete the links only if you purchased the pro version.
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
